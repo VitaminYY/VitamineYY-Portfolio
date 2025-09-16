@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Yusuf Yehia | UX/UI Designer & Web Developer Portfolio - Cairo, Egypt</title>
+  <meta name="title" content="Yusuf Yehia | UX/UI Designer & Web Developer Portfolio">
+  <meta name="description" content="Professional UX/UI designer and web developer based in Cairo with 16 months of experience. Specialized in creating user-friendly interfaces and responsive web applications.">
+  <meta name="keywords" content="UX designer, UI designer, web developer, portfolio, Cairo, Egypt, frontend development, user experience, user interface, web design, responsive design">
+  <meta name="author" content="Yusuf Yehia">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FF7906">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vitamineyy.com/">
+  <meta property="og:title" content="Yusuf Yehia | UX/UI Designer & Web Developer">
+  <meta property="og:description" content="Professional UX/UI designer and web developer based in Cairo with expertise in creating user-friendly interfaces and responsive web applications.">
+  <meta property="og:image" content="https://vitamineyy.com/images/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://vitamineyy.com/">
+  <meta property="twitter:title" content="Yusuf Yehia | UX/UI Designer & Web Developer">
+  <meta property="twitter:description" content="Professional UX/UI designer and web developer based in Cairo with expertise in creating user-friendly interfaces.">
+  <meta property="twitter:image" content="https://vitamineyy.com/images/preview.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yusuf Yehia",
+    "url": "https://vitamineyy.com",
+    "image": "https://vitamineyy.com/images/profile.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/yusufyehia",
+      "https://behance.net/vitamineyy",
+      "https://github.com/vitamineyy",
+      "https://dribbble.com/vitamineyy"
+    ],
+    "jobTitle": "UX/UI Designer and Web Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cairo",
+      "addressCountry": "Egypt"
+    },
+    "knowsAbout": [
+      "UX Design",
+      "UI Design",
+      "Web Development",
+      "User Interface",
+      "User Experience",
+      "Responsive Web Design"
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #EDE6D3;
+      --text: #0f1720;
+      --muted: #6b6b6b;
+      --accent: #FF7906;
+      --title-name-color: #2C2C2C;
+      --title-yy-color: #FF7906;
+      --job-color: #FF7906;
+      --city-color: #2C2C2C;
+      --gx: 50%;
+      --gy: 36%;
+      --gx2: 30%;
+      --gy2: 70%;
+      --highlight-size: 36px;
+      --hl-cover-color: rgba(255, 255, 255, 0.25);
+      --transition-slow: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --transition-fast: 0.3s ease;
+      --card-shadow: 0 10px 30px rgba(7, 12, 17, 0.08);
+      --card-hover-shadow: 0 20px 40px rgba(7, 12, 17, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      color: var(--text);
+      background: radial-gradient(800px 500px at var(--gx) var(--gy), color-mix(in srgb, var(--title-name-color) 28%, rgba(255, 255, 255, 0)) 0%, transparent 28%),
+                  radial-gradient(600px 420px at var(--gx2) var(--gy2), color-mix(in srgb, var(--title-yy-color) 26%, rgba(255, 255, 255, 0)) 0%, transparent 26%),
+                  var(--bg);
+      transition: background 520ms linear, color 420ms ease, background-color 420ms ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent);
+      color: white;
+      padding: 8px;
+      z-index: 10000;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: radial-gradient(circle at 6% 10%, rgba(255, 255, 255, 0.03), transparent 8%),
+                        radial-gradient(circle at 92% 86%, rgba(0, 0, 0, 0.01), transparent 10%);
+      mix-blend-mode: overlay;
+      filter: blur(6px) saturate(110%);
+      opacity: 0.95;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 36px auto;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      padding: 18px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .title {
+      font-family: 'Bungee', sans-serif;
+      margin: 0;
+      font-size: clamp(44px, 8vw, 104px);
+      line-height: 0.92;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      color: var(--title-name-color);
+      -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.03);
+      text-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+      transition: color 420ms cubic-bezier(.2, .9, .2, 1), transform 300ms ease;
+      will-change: transform;
+    }
+
+    .title .yy {
+      color: var(--title-yy-color);
+      -webkit-text-stroke: 0.6px rgba(0, 0, 0, 0.06);
+      text-shadow: 0 12px 36px color-mix(in srgb, var(--title-yy-color), rgba(0, 0, 0, 0.12));
+    }
+
+    .name-title {
+      font-family: 'Bungee', sans-serif;
+      font-size: clamp(28px, 5vw, 52px);
+      margin: 20px 0 8px 0;
+      color: var(--title-name-color);
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .name-title .y-letter {
+      color: var(--title-yy-color);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-top: 6px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .subtitle .city {
+      color: var(--city-color);
+      font-weight: 600;
+    }
+
+    .subtitle .job {
+      color: var(--job-color);
+      font-weight: 700;
+    }
+
+    .stats {
+      display: flex;
+      gap: 26px;
+      margin-top: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stats .block {
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .stats .num {
+      font-weight: 800;
+      font-size: 20px;
+      margin-right: 6px;
+      color: var(--text);
+      display: inline-block;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+      align-items: center;
+    }
+
+    .btn-contact {
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent), #fff 24%));
+      color: white;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 26px color-mix(in srgb, var(--accent), rgba(0, 0, 0, 0.12));
+      transition: transform 160ms ease, box-shadow 160ms ease;
+      font-size: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-contact::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+      z-index: 1;
+    }
+
+    .btn-contact:hover::before {
+      left: 100%;
+    }
+
+    .btn-contact:active {
+      transform: translateY(1px);
+    }
+
+    .btn-contact:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .highlights-row {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-top: 6px;
+      justify-content: center;
+    }
+
+    .hl {
+      width: var(--highlight-size);
+      height: var(--highlight-size);
+      border-radius: 50%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      position: relative;
+      transition: transform 240ms cubic-bezier(.2, .9, .2, 1), box-shadow 240ms, border-color 240ms;
+      box-shadow: 0 8px 24px rgba(7, 12, 17, 0.06);
+      background-color: var(--hl-cover-color);
+      border: 3px solid rgba(255, 255, 255, 0.62);
+    }
+
+    .hl:hover, .hl:focus {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 14px 36px rgba(7, 12, 17, 0.08);
+    }
+
+    .hl.active {
+      outline: 4px solid color-mix(in srgb, var(--accent), rgba(255, 255, 255, 0.18));
+    }
+
+    .hl#hl1 .mini {
+      width: 100%;
+      height: 100%;
+      background-color: #FF7906;
+      border-radius: 50%;
+    }
+
+    .hl#hl2 .mini {
+      width: 100%;
+      height: 100%;
+      background-color: #002180;
+      border-radius: 50%;
+    }
+
+    .hl#hl3 .mini {
+      width: 100%;
+      height: 100%;
+      background-color: #005319;
+      border-radius: 50%;
+    }
+
+    .hl-label {
+      text-align: center;
+      font-size: 18px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 32px 0 16px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 2px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .filter-btn:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+   /* Important adjustments for displaying the cover image */
+
+    .post {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      transition: transform 360ms cubic-bezier(.2, .9, .2, 1), filter 300ms, box-shadow 300ms;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .post::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    .post img {
+      display: none; /* Hide the inner image */
+    }
+
+    .post:hover {
+      transform: translateY(-10px) scale(1.02);
+      filter: brightness(1.04) saturate(1.08);
+      box-shadow: var(--card-hover-shadow);
+    }
+
+    .post:hover::after {
+      opacity: 1;
+    }
+
+    .project-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      transform: translateY(100%);
+      transition: transform var(--transition-fast);
+      z-index: 2;
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .post:hover .project-title {
+      transform: translateY(0);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+      border-radius: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    .about-section {
+      margin-top: 60px;
+      padding: 30px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform var(--transition-fast);
+    }
+
+    .about-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .about-section h2 {
+      font-family: 'Bungee', sans-serif;
+      color: var(--title-name-color);
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .about-section p {
+      line-height: 1.6;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .skills-section {
+      margin-top: 60px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-list li {
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-right: 5px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      overflow-y: auto;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: var(--bg);
+      margin: auto;
+      max-width: 900px;
+      width: 90%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      transform: translateY(50px);
+      transition: transform 0.4s ease;
+    }
+
+    .modal.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-title {
+      font-family: 'Bungee', sans-serif;
+      font-size: 24px;
+      margin: 0;
+      color: var(--title-name-color);
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--text);
+      transition: transform 0.2s ease;
+    }
+
+    .close-modal:hover {
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .modal-image {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .modal-image img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+
+    .modal-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .modal-description {
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .modal-description h4 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .modal-description ul {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .modal-description li {
+      margin-bottom: 8px;
+    }
+
+    .modal-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .modal-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .modal-links a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-extra-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .modal-extra-images img {
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .modal-extra-images img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      background-color: var(--accent);
+      color: white;
+      padding: 40px 20px 30px;
+      margin-top: 60px;
+      position: relative;
+      overflow: hidden;
+      transform-origin: top center;
+      transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      will-change: transform, background-color, border-radius;
+      z-index: 10;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer.revealed {
+      transform: scaleY(1) translateY(0);
+      border-radius: 0;
+      opacity: 1;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-logo {
+      font-family: 'Bungee', sans-serif;
+      font-size: clamp(36px, 8vw, 72px);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .footer-logo span {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-logo span:hover {
+      transform: translateY(-8px);
+    }
+
+    .footer-logo .yy {
+      color: white;
+      -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-nav a:hover {
+      transform: translateY(-2px);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      font-size: 20px;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-5px) scale(1.1);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .copyright {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-top: 20px;
+    }
+
+    .footer-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .circle-1 {
+      width: 100px;
+      height: 100px;
+      top: -50px;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .circle-2 {
+      width: 150px;
+      height: 150px;
+      bottom: -75px;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .circle-3 {
+      width: 80px;
+      height: 80px;
+      bottom: 30%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(10deg);
+      }
+    }
+
+    .footer-particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      animation: particleFloat 5s linear infinite;
+    }
+
+    @keyframes particleFloat {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .footer-stretch-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .stretch-word {
+      font-family: 'Bungee', sans-serif;
+      font-size: 120px;
+      color: rgba(255, 255, 255, 0.05);
+      white-space: nowrap;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: scaleY(0);
+      transform-origin: center bottom;
+    }
+
+    footer.revealed .stretch-word {
+      transform: scaleY(1);
+    }
+
+    .char {
+      display: inline-block;
+      will-change: transform;
+      transition: transform 260ms cubic-bezier(.2, .8, .2, 1);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-fast);
+      z-index: 999;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-5px);
+    }
+
+    @media (max-width: 920px) {
+      .title {
+        font-size: clamp(34px, 8vw, 56px);
+      }
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .name-title {
+        font-size: clamp(24px, 5vw, 42px);
+      }
+      .modal-body {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-extra-images {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .profile {
+        gap: 12px;
+        padding: 12px;
+      }
+      .title {
+        font-size: clamp(28px, 9vw, 44px);
+      }
+      .footer-nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .name-title {
+        flex-direction: column;
+        gap: 0;
+      }
+      .modal-body {
+        padding: 20px;
+      }
+      .modal-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .filter-container {
+        gap: 8px;
+      }
+      .filter-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="overlay" aria-hidden="true"></div>
+
+  <div class="wrap" role="main" id="main-content">
+    <header class="profile" role="banner">
+      <div class="meta">
+        <h1 class="title" id="title">
+          <span class="word"><span class="char">V</span><span class="char">i</span><span class="char">t</span><span class="char">a</span><span class="char">m</span><span class="char">i</span><span class="char">n</span><span class="char">e</span></span>
+          &nbsp;
+          <span class="word"><span class="char yy">Y</span><span class="char yy">Y</span></span>
+        </h1>
+        
+        <div class="name-title">
+          <span class="y-letter">Y</span>usuf <span class="y-letter">Y</span>ehia
+        </div>
+
+        <p class="subtitle">
+          <span class="city">Cairo</span> ·
+          <span class="job">UX / UI / Web Developer</span>
+        </p>
+
+        <div class="contact-row">
+          <button class="btn-contact" id="contact">Contact Me</button>
+
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div class="highlights-row" role="tablist" aria-label="Theme highlights">
+              <div class="hl" data-theme="t1" id="hl1" tabindex="0" title="Light Theme" role="tab" aria-selected="false"><div class="mini"></div></div>
+              <div class="hl" data-theme="t2" id="hl2" tabindex="0" title="Blue Theme" role="tab" aria-selected="false"><div class="mini"></div></div>
+              <div class="hl" data-theme="t3" id="hl3" tabindex="0" title="Green Theme" role="tab" aria-selected="false"><div class="mini"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section class="projects-section" aria-label="projects">
+      <h2>My Projects</h2>
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design</button>
+        <button class="filter-btn" data-filter="development">Web Development</button>
+        <button class="filter-btn" data-filter="Lab">Lab</button>
+      </div>
+      
+      <div class="grid">
+        
+        <!-- Projects with separate cover images -->
+
+        <article class="post" data-project="1" data-category="design" data-thumbnail="img/frame-41-5.png" tabindex="0" role="button" aria-label="View project: MeowGuard — Protecting Cats, Preserving Love">
+          <img src="img/Desktop - 1.png" alt="Landing page design for MeowGuard — Protecting Cats, Preserving Love" loading="lazy" width="600" height="600">
+          <h3 class="project-title">MeowGuard — UX meets seven lives</h3>
+        </article>
+        
+        <article class="post" data-project="2" data-category="development" data-thumbnail="img/Frame--42.png" tabindex="0" role="button" aria-label="View project: Procrastination Olympics 2025 — Why rush, when you can rest?">
+          <img src="img/Screenshot 2025-09-03-131529.png" alt="Landing page design for Procrastination Olympics 2025" loading="lazy" width="600" height="600">
+          <h3 class="project-title">Procrastination Olympics 2025 — Why rush, when you can rest?</h3>
+        </article>
+        
+        <article class="post" 
+         data-project="3" 
+         data-category="Lab" 
+         data-thumbnail="img/Lab.png" 
+         tabindex="0" 
+         role="button" 
+         aria-label="View project:Social Profile Page UI Challenge">
+
+  <img src="img/Lab2.png" 
+       alt="Social Profile Page UI Challenge Design" 
+       loading="lazy" 
+       width="600" 
+       height="600">
+
+  <h3 class="project-title">Profile Page — UI Lab</h3>
+</article>
+
+        
+      <article class="post" 
+         data-project="4" 
+         data-category="design" 
+         data-thumbnail="img/Frame1.png" 
+         tabindex="0" 
+         role="button" 
+         aria-label="View project: Join the Mission to Mars — Astronaut Registration UI">
+
+  <img src="img/iPhone14&15Pro-1.png" 
+       alt="Astronaut registration page concept for Mars Mission" 
+       loading="lazy" 
+       width="600" 
+       height="600">
+
+  <h3 class="project-title">Join the Mission to Mars — UI that’s out of this world</h3>
+</article>
+
+        
+        <article class="post" 
+  data-project="5" 
+  data-category="development" 
+  data-thumbnail="img/Fr4.png" 
+  tabindex="0" 
+  role="button" 
+  aria-label="View project: ICARUS — Character Design and Artistic Innovation">
+
+  <img 
+    src="img/127.0.0.1_5500_index.html.png" 
+    alt="ICARUS Art Gallery Landing Page" 
+    loading="lazy" 
+    width="600" 
+    height="600">
+
+  <h3 class="project-title">ICARUS — Art Gallery Landing Page</h3>
+</article>
+
+        
+        <article class="post" data-project="6" data-category="design" data-thumbnail="img/Frame25.png" tabindex="0" role="button" aria-label="View project: GreenerSide — The grass is always greener on our side">
+           <img src="img/Screenshot 2025-09-15 232826.png" 
+       alt="Landing page and product concept for GreenerSide"  loading="lazy" width="600" height="600">
+          <h3 class="project-title">GreenerSide — Your fantasy, our green dream</h3>
+        </article>
+      </div>
+    </section>
+    
+    <section class="skills-section">
+      <h2>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>UI/UX Design</h3>
+          <ul class="skill-list">
+            <li>User Research</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>Interaction Design</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Frontend Development</h3>
+          <ul class="skill-list">
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <!-- <li>React</li> -->
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Tools & Technologies</h3>
+          <ul class="skill-list">
+            <li>Figma</li>
+            <li>Adobe XD</li>
+            <!-- <li>Git</li> -->
+            <li>Web Accessibility</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about-section">
+      <h2>About Me</h2>
+ <p>Hey, I’m Yusuf Yehia — I design interfaces and build the code behind them. Based in Cairo, but my work doesn’t believe in borders.</p>
+  
+  <p>For the past 16 months, I’ve been wrestling messy ideas into clean flows and turning “can we even do this?” into “oh, that actually works.” My thing is making digital stuff look good <em>and</em> feel effortless.</p>
+  
+  <p>Outside the screen? I’m usually digging into design subcultures, arguing with new tools, or wandering Cairo with headphones on and a camera in hand.</p>
+</section>
+  </div>
+  
+  <!-- Project Modal -->
+  <div class="modal" id="project-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-project-title">Project Title</h2>
+        <button class="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modal-project-image" src="" alt="Project image">
+        </div>
+        <div class="modal-details">
+          <div class="modal-description" id="modal-project-description">
+            Project description will appear here.
+          </div>
+          <div class="modal-links" id="modal-project-links">
+            <!-- Links will be added dynamically -->
+          </div>
+          <div class="modal-extra-images" id="modal-extra-images">
+            <!-- Additional images will be added dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <footer id="main-footer">
+    <div class="footer-stretch-text">
+      <div class="stretch-word">VITAMINEYY</div>
+    </div>
+    
+    <div class="footer-circle circle-1"></div>
+    <div class="footer-circle circle-2"></div>
+    <div class="footer-circle circle-3"></div>
+    
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span>V</span>
+        <span>i</span>
+        <span>t</span>
+        <span>a</span>
+        <span>m</span>
+        <span>i</span>
+        <span>n</span>
+        <span>e</span>
+        <span class="yy">Y</span>
+        <span class="yy">Y</span>
+      </div>
+      
+      <nav class="footer-nav">
+        <a href="https://www.instagram.com/yehi1a?igsh=MXhnc211eGx1dzh6bg%3D%3D" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </nav>
+      
+      <p class="copyright">© 2023 VitamineYY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    
+    const root = document.documentElement;
+
+    const PALETTES = {
+      t1: { bg:'#EDE6D3', nameColor:'#2C2C2C', jobColor:'#FF7906', cityColor:'#2C2C2C' },
+      t2: { bg:'#0779FF', nameColor:'#B7F9FF', jobColor:'#002180', cityColor:'#B7F9FF' },
+      t3: { bg:'#37AF5D', nameColor:'#C6FF00', jobColor:'#005319', cityColor:'#C6FF00' }
+    };
+
+    function getSavedTheme(){
+      try { return localStorage.getItem('vitamineyy-theme'); } catch(e){ return null; }
+    }
+
+    function saveTheme(key){
+      try { localStorage.setItem('vitamineyy-theme', key); } catch(e){}
+    }
+
+    function applyPalette(key){
+      const p = PALETTES[key];
+      if(!p) return;
+      root.style.setProperty('--bg', p.bg);
+      root.style.setProperty('--title-name-color', p.nameColor);
+      root.style.setProperty('--title-yy-color', p.jobColor);
+      root.style.setProperty('--job-color', p.jobColor);
+      root.style.setProperty('--city-color', p.cityColor);
+      root.style.setProperty('--accent', p.jobColor);
+
+      document.body.style.color = getContrastText(p.bg);
+      document.querySelectorAll('.title').forEach(el => el.style.color = p.nameColor);
+      document.querySelectorAll('.title .yy').forEach(el => el.style.color = p.jobColor);
+      document.querySelectorAll('.name-title .y-letter').forEach(el => el.style.color = p.jobColor);
+
+      document.querySelectorAll('.hl').forEach(h => {
+        h.classList.remove('active');
+        h.setAttribute('aria-selected', 'false');
+      });
+      const active = document.querySelector(`.hl[data-theme="${key}"]`);
+      if(active){
+        active.classList.add('active');
+        active.setAttribute('aria-selected', 'true');
+      }
+
+      // Update footer background
+      document.querySelector('footer').style.backgroundColor = p.jobColor;
+      
+      // Update about section text colors
+      document.querySelector('.about-section h2').style.color = p.nameColor;
+      document.querySelectorAll('.about-section p').forEach(pEl => {
+        pEl.style.color = getContrastText(PALETTES[key].bg);
+      });
+
+      saveTheme(key);
+    }
+
+    function getContrastText(hex){
+      if(!hex) return '#0f1720';
+      const h = hex.replace('#','');
+      const r = parseInt(h.substring(0,2),16);
+      const g = parseInt(h.substring(2,4),16);
+      const b = parseInt(h.substring(4,6),16);
+      const lum = 0.2126*r + 0.7152*g + 0.0722*b;
+      return lum > 180 ? '#0f1720' : '#f6f6f8';
+    }
+
+    function handleThemeSelection(eventKey){
+      applyPalette(eventKey);
+    }
+
+    document.querySelectorAll('.hl').forEach(hl => {
+      hl.addEventListener('click', () => handleThemeSelection(hl.dataset.theme));
+      hl.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleThemeSelection(hl.dataset.theme);
+        }
+      });
+    });
+
+    const saved = getSavedTheme();
+    if(saved && PALETTES[saved]){ applyPalette(saved); } else { applyPalette('t1'); }
+
+    const title = document.getElementById('title');
+    const chars = Array.from(title.querySelectorAll('.char'));
+    let mouse={x:-9999,y:-9999}, raf = null;
+    const influence = 200, maxT = 38;
+    const repelPower = 0.3;
+
+    function throttle(fn, wait){
+      let lastTime = 0;
+      return function(...args){
+        const now = Date.now();
+        if(now - lastTime >= wait){
+          lastTime = now;
+          fn(...args);
+        }
+      }
+    }
+
+    function updateMouse(e){
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      if(!raf){ raf = requestAnimationFrame(animate); }
+    }
+
+    function animate(){
+      const rect = title.getBoundingClientRect();
+      chars.forEach(c => {
+        const cx = c.offsetLeft + c.offsetWidth/2 + rect.left;
+        const cy = c.offsetTop + c.offsetHeight/2 + rect.top;
+        let dx = mouse.x - cx;
+        let dy = mouse.y - cy;
+        let dist = Math.sqrt(dx*dx + dy*dy);
+        if(dist < influence){
+          let force = (influence - dist) * repelPower;
+          let angle = Math.atan2(dy, dx);
+          let tx = -force * Math.cos(angle);
+          let ty = -force * Math.sin(angle);
+          tx = Math.min(Math.max(tx, -maxT), maxT);
+          ty = Math.min(Math.max(ty, -maxT), maxT);
+          c.style.transform = `translate(${tx}px,${ty}px) scale(1.08)`;
+          c.style.zIndex = '1';
+        } else {
+          c.style.transform = 'translate(0,0) scale(1)';
+          c.style.zIndex = '0';
+        }
+      });
+      raf = null;
+    }
+
+    document.addEventListener('mousemove', throttle(updateMouse, 18));
+    document.addEventListener('mouseleave', () => {
+      mouse.x = -9999;
+      mouse.y = -9999;
+      if(!raf) raf = requestAnimationFrame(animate);
+    });
+
+    function drift(){
+      let gx = parseFloat(getComputedStyle(root).getPropertyValue('--gx'));
+      let gy = parseFloat(getComputedStyle(root).getPropertyValue('--gy'));
+      gx += 0.02; if(gx>100) gx=-20;
+      gy += 0.015; if(gy>100) gy=-10;
+      root.style.setProperty('--gx', gx+'%');
+      root.style.setProperty('--gy', gy+'%');
+      requestAnimationFrame(drift);
+    }
+    drift();
+    
+    // Create floating particles in footer
+    function createParticles() {
+      const footer = document.querySelector('footer');
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('footer-particle');
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        particle.style.animationDuration = (3 + Math.random() * 4) + 's';
+        footer.appendChild(particle);
+      }
+    }
+    
+    createParticles();
+    
+    // Project Modal Functionality
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-project-title');
+    const modalImage = document.getElementById('modal-project-image');
+    const modalDescription = document.getElementById('modal-project-description');
+    const modalLinks = document.getElementById('modal-project-links');
+    const modalExtraImages = document.getElementById('modal-extra-images');
+    const closeModalBtn = document.querySelector('.close-modal');
+    
+    //////////////////////////////////// Project data /////////////////////////////
+    const projects = {
+     1: {
+  title: "MeowGuard — Protecting Cats, Preserving Love",
+  description: `
+    <p><strong>Intro:</strong> Every cat deserves a safe and loving life. That’s why I designed <em>MeowGuard</em>, a landing page concept that protects cats by turning empathy into action.</p>
+
+    <h4>The Problem</h4>
+    <ul>
+      <li>Thousands of cats face hunger, illness, and danger on the streets every single day.</li>
+      <li>Many suffer injuries and diseases with no care.</li>
+      <li>Countless cats live without the warmth of a home.</li>
+    </ul>
+
+    <h4>Our Mission in Action</h4>
+    <ul>
+      <li><strong>Rescue</strong> – Saving cats from unsafe conditions.</li>
+      <li><strong>Care</strong> – Providing medical treatment, food, and comfort.</li>
+      <li><strong>Adoption</strong> – Matching cats with safe, loving families.</li>
+    </ul>
+
+    <h4>My Role</h4>
+    <p>I designed a landing page that balances empathy with urgency. The UX guided visitors smoothly from awareness (‘the problem’) to action (‘donate’ or ‘adopt’). Visual design leaned on soft contrasts and warm tones to echo safety and care, while microcopy avoided cliché charity-speak.</p>
+
+    <h4>Design Challenge</h4>
+    <p>The challenge was avoiding generic NGO tones. Instead of pity-driven language, I built a narrative that respected both the cats and the users—serious enough to show the problem, but warm and witty enough to keep people engaged.</p>
+
+    <h4>Outcome</h4>
+    <ul>
+      <li>Donation conversion improved (concept-based metrics).</li>
+      <li>Higher adoption form submissions.</li>
+      <li>User feedback: “Finally, a cat site that doesn’t guilt-trip.”</li>
+    </ul>
+  `,
+  links: [
+    { text: "View Prototype", url: "https://www.figma.com/proto/YXd4sVTHxU6XfplVuBXhb3/MeowGuard?node-id=2024-3&t=kKYesWfaMtPfUi5i-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" },
+    // { text: "Case Study", url: "#" }
+  ],
+  extraImages: [
+    // "img/meowguard-1.png",
+    // "img/meowguard-2.png"
+  ]
+      },
+      
+      2: {
+        title: "Procrastination Olympics 2025 — Why rush, when you can rest?",
+  description: `
+    <p><strong>Intro:</strong> Finally, a global competition for people who never finish anything. 
+       <em>ProcrastiNation</em> celebrates the art of delay with style, humor, and an entire leaderboard dedicated to doing nothing.</p>
+
+    <h4>The Problem</h4>
+    <ul>
+      <li>Many people struggle with constant pressure to “be productive.”</li>
+      <li>Existing apps and competitions reward speed and efficiency only.</li>
+      <li>Motivation fatigue is at an all-time high worldwide.</li>
+    </ul>
+
+    <h4>Our Solution</h4>
+    <ul>
+      <li><strong>Landing Page Humor</strong> – Witty headlines, playful copy, and tongue-in-cheek UI.</li>
+      <li><strong>Interactive Features</strong> – “Generate Excuse” button, Hall of Fame, and endless rankings.</li>
+      <li><strong>Visual Style</strong> – Bold typography, playful colors, and a whimsical layout to reinforce procrastination vibes.</li>
+    </ul>
+
+    <h4>My Role</h4>
+    <p>I designed the entire interface from wireframes to high-fidelity mockups, creating a humorous yet coherent experience. Focused on readable typography, playful hierarchy, and UI interactions that amplify the comedic tone.</p>
+
+    <h4>Design Challenge</h4>
+    <p>The main challenge was balancing humor with usability. I wanted users to laugh, explore, and enjoy the concept without feeling lost or frustrated.</p>
+
+    <h4>Outcome</h4>
+    <ul>
+      <li>Concept got excellent feedback on readability and humor.</li>
+      <li>Interactive buttons and tables effectively conveyed the playful tone.</li>
+      <li>Design inspired mockups for future gamified procrastination concepts.</li>
+    </ul>
+  `,
+        links: [
+          { text: "View Live", url: "https://vitaminyy.github.io/ProcrastiNation/" },
+          // { text: "GitHub", url: "#" }
+        ],
+        extraImages: [
+          // "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+          // "img/Screenshot 2025-09-15 230225.png"
+        ]
+      },
+      3: {
+        title: "Profile Page — UI Lab",
+  category: "Lab",
+  description: "A simple profile page concept for a fictional social platform. Created as a UI challenge — not a full project, just an experimental lab piece.",
+        links: [
+          // { text: "View Prototype", url: "" },
+          // { text: "Case Study", url: "#" }
+        ],
+        extraImages: [
+          // "img/",
+          // "img/Screenshot 2025-09-15 232947.png"
+        ]
+      },
+      4: {
+         title: "Join the Mission to Mars — Astronaut Registration UI",
+  description: `
+    <p><strong>Intro:</strong> A UI design challenge to create an engaging astronaut registration page for a Mars mission. 
+       The goal was to make onboarding playful, futuristic, and meaningful, adding small storytelling elements for delight.</p>
+
+    <h4>The Problem</h4>
+    <ul>
+      <li>Traditional registration forms are dull and uninspiring.</li>
+      <li>Users need a clear, playful flow to enter astronaut credentials without feeling lost.</li>
+      <li>The challenge: integrate sci-fi theming and small, meaningful details without compromising usability.</li>
+    </ul>
+
+    <h4>Our Solution</h4>
+    <ul>
+      <li><strong>Futuristic UI Elements</strong> – Rounded inputs with subtle glow effects and space-themed icons. Notably, the “user” icon for email input was replaced with a tiny astronaut to reinforce the theme.</li>
+      <li><strong>7 Stars Motif</strong> – Scattered 7 small stars across the page, representing the monthly “7 stars” challenge for notable achievements. One special star, placed near the “Confirm Mission” button, represents childhood achievement, drawn in a playful, imperfect way reminiscent of spontaneous teacher-drawn stars.</li>
+      <li><strong>Clear Form Flow</strong> – Astronaut Name → Space Mail → Mission Password → Confirm Mission.</li>
+      <li><strong>Interactive Microcopy</strong> – “Already an astronaut? Log in” keeps tone friendly and playful.</li>
+    </ul>
+
+    <h4>My Role</h4>
+    <p>I designed the high-fidelity mockup and interactive prototype in Figma. Focused on visual hierarchy, futuristic aesthetics, and subtle storytelling via the 7 stars, astronaut icons, and playful microcopy to create a memorable onboarding experience.</p>
+
+    <h4>Design Challenge</h4>
+    <p>Balancing a playful space theme, symbolic storytelling (the stars), and clarity was key. Inputs and CTA buttons had to feel “spacey” yet familiar enough to prevent user confusion while embedding meaningful little details for engagement.</p>
+
+    <h4>Outcome</h4>
+    <ul>
+      <li>Engaging concept with positive feedback from peers and mentors.</li>
+      <li>Figma prototype showed intuitive flow, easy onboarding, and delightful visual storytelling.</li>
+      <li>Visual style successfully conveyed sci-fi adventure with playful, meaningful details without overwhelming the user.</li>
+    </ul>
+  `,
+        links: [
+          { text: "View Prototype", url: "https://www.figma.com/proto/X77zt6XVzbDRWTpw8rI2hN/Mars--sign-up-?node-id=70-2&t=h0aP6S4JmTdSoMLa-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" }
+        ],
+        extraImages: [
+          // "https://images.unsplash.com/photo-1634942536746-46b9a6de9231?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+          // "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+        ]
+      },
+      5: {
+        title: "ICARUS — Character Design and Artistic Innovation",
+  description: `
+    <p><strong>Intro:</strong> A minimal landing page showcasing an art gallery collection, designed with CSS and HTML. The focus was on presenting artwork clearly while giving the page a refined, artistic feel.</p>
+
+    <h4>The Problem</h4>
+    <ul>
+      <li>Art collections are often cluttered online, making it hard to focus on individual pieces.</li>
+      <li>Users need a visually appealing layout that balances images and descriptive text.</li>
+      <li>The challenge: maintain elegance while making the page responsive and user-friendly.</li>
+    </ul>
+
+    <h4>Our Solution</h4>
+    <ul>
+      <li><strong>Header Navigation:</strong> Simple, clean top navigation with Collection, Artist, Library, and About Us sections.</li>
+      <li><strong>Main Showcase:</strong> Featured artwork in a two-column layout; one side with text (title & description), the other with the main image.</li>
+      <li><strong>Secondary Art Section:</strong> Additional paintings displayed in a neat grid (Watercolor, Acrylic, Oil, Abstract, Realism, Surrealism, Impressionism).</li>
+      <li><strong>CSS Styling:</strong> Dark background (#12100f) with a warm primary color (#f8d76a), image borders, rounded shapes, and flexible layouts to emphasize the artwork.</li>
+      <li><strong>Responsiveness:</strong> Media queries ensure images and text scale well on tablets and mobile devices.</li>
+    </ul>
+
+    <h4>My Role</h4>
+    <p>I designed the landing page structure, applied responsive CSS, and optimized typography and layout for maximum readability. The main goal was to respect the artwork while creating a smooth, elegant browsing experience.</p>
+
+    <h4>Design Challenge</h4>
+    <p>Balancing text and images without overwhelming the user, while keeping the aesthetic refined and the interface responsive across screen sizes.</p>
+
+    <h4>Outcome</h4>
+    <ul>
+      <li>Clean, visually appealing landing page emphasizing artwork over UI elements.</li>
+      <li>Responsive design ensures seamless experience from desktop to mobile.</li>
+      <li>Project demonstrates skill in layout, typography, and CSS-based design for artistic presentations.</li>
+    </ul>
+  `,
+        links: [
+          { text: "View Live", url: "https://vitaminyy.github.io/icarus-art-2/" },
+          // { text: "Case Study", url: "#" }
+        ],
+        extraImages: [
+          // "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+          // "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+        ]
+      },
+      6: {
+        title: "GreenerSide — The grass is always greener on our side",
+  description: `
+    <p><strong>Intro:</strong> A whimsical branding concept for a fantasy green lifestyle. 
+       GreenerSide teases desire, humor, and imagination — all wrapped in playful visuals and copy.</p>
+
+    <h4>The Challenge</h4>
+    <ul>
+      <li>Create a brand that feels luxurious and playful without being offensive.</li>
+      <li>Communicate products and club membership in a humorous, fantasy-driven tone.</li>
+      <li>Maintain ethical and organic messaging while keeping the brand fun and edgy.</li>
+    </ul>
+
+    <h4>Our Solution</h4>
+    <ul>
+      <li><strong>Brand Voice</strong> – Tongue-in-cheek copywriting: “99% recommend it. The other 1%? Probably a narc.”</li>
+      <li><strong>Product Presentation</strong> – Clear, playful, fantasy-oriented listing of Spoon, Bubble Makers, Art Supplies, Weed-ing Brownies.</li>
+      <li><strong>Visual Style</strong> – Lush green tones, clean typography, whimsical accents to convey dreaminess and exclusivity.</li>
+    </ul>
+
+    <h4>My Role</h4>
+    <p>I designed the full landing page, product cards, and fantasy club subscription section. Focused on engaging microcopy, playful hierarchy, and creating an immersive brand experience.</p>
+
+    <h4>Design Challenge</h4>
+    <p>The key challenge was balancing humor, fantasy, and product clarity — making users smile without confusing them about what’s real vs. for fun.</p>
+
+    <h4>Outcome</h4>
+    <ul>
+      <li>Branding concept well-received in mockup presentations.</li>
+      <li>Interactive subscription section conceptually boosted engagement (concept-based metrics).</li>
+      <li>Visual identity and copy maintained consistent fantasy/green tone throughout.</li>
+    </ul>
+  `,
+        links: [
+          { text: "View Prototype", url: "https://www.figma.com/proto/gBAIcBr7UYDr0ZCnxlwQZz/Untitled?node-id=1-3&t=bQenpafEoHDhmByC-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3" },
+          // { text: "Full Report", url: "#" }
+        ],
+        extraImages: [
+          // "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+          // "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+        ]
+      }
+    };
+    
+    // Initialize thumbnails for projects
+    function initThumbnails() {
+      const projects = document.querySelectorAll('.post');
+      
+      projects.forEach(project => {
+        const thumbnailUrl = project.getAttribute('data-thumbnail');
+        
+        if (thumbnailUrl) {
+          //Set the cover image as the element background
+          project.style.backgroundImage = `url(${thumbnailUrl})`;
+        }
+      });
+    }
+    
+    // Open modal when a project is clicked
+    document.querySelectorAll('.post').forEach(post => {
+      post.addEventListener('click', () => {
+        const projectId = post.getAttribute('data-project');
+        const project = projects[projectId];
+        
+        if (project) {
+          modalTitle.textContent = project.title;
+          // Display the actual project image in the modal (not the cover image
+          modalImage.src = post.querySelector('img').src;
+          modalImage.alt = project.title;
+          modalDescription.innerHTML = project.description;
+          
+          // Clear previous links and add new ones
+          modalLinks.innerHTML = '';
+          project.links.forEach(link => {
+            const linkEl = document.createElement('a');
+            linkEl.href = link.url;
+            linkEl.textContent = link.text;
+            linkEl.target = "_blank";
+            linkEl.rel = "noopener noreferrer";
+            modalLinks.appendChild(linkEl);
+          });
+          
+          // Clear previous extra images and add new ones
+          modalExtraImages.innerHTML = '';
+          if (project.extraImages && project.extraImages.length > 0) {
+            project.extraImages.forEach(imgSrc => {
+              const imgEl = document.createElement('img');
+              imgEl.src = imgSrc;
+              imgEl.alt = "Project detail";
+              modalExtraImages.appendChild(imgEl);
+            });
+          }
+          
+          // Show modal
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+    
+    // Close modal
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+    
+    // Footer reveal animation
+    function initFooterAnimation() {
+      const footer = document.getElementById('main-footer');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            footer.classList.add('revealed');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(footer);
+    }
+    
+    // Initialize when page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      initFooterAnimation();
+      initFilterButtons();
+      initBackToTop();
+      initThumbnails(); // Initialize thumbnails
+      
+      // Add keyboard support for project elements
+      document.querySelectorAll('.post').forEach(project => {
+        project.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            project.click();
+          }
+        });
+      });
+    });
+
+    // Project filtering functionality
+    function initFilterButtons() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projects = document.querySelectorAll('.post');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          // Filter projects
+          projects.forEach(project => {
+            if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+              project.style.display = 'flex';
+            } else {
+              project.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+    
+    // Back to top button functionality
+    function initBackToTop() {
+      const backToTopButton = document.querySelector('.back-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+    
+    // Contact button functionality
+    document.getElementById('contact').addEventListener('click', () => {
+      window.location.href = 'mailto:yousifyehia26@gmail.com?subject=Unfinished%20Business&body=Yusuf%2C%0A%0ADo%20you%20still%20remember%20our%20little%20arrangement%20about%20the%20$54%2C345%3F%20You%20promised%20it%20would%20stay%20between%20us%2C%20but%20I%20can%27t%20delay%20the%20transfer%20anymore.%20We%20both%20know%20what%27s%20at%20stake...%0A%0A(just%20kidding%20of%20course%20%3A%29%20this%20is%20a%20portfolio%20contact%20message)';
+    });
+
+  </script>
+
+</body>
+</html>
